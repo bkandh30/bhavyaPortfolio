@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Building, GraduationCap } from "lucide-react"
 import FadeInSection from "./FadeInSection"
+import { useEffect, useState } from "react"
 
 const experiences = [
   {
@@ -52,13 +53,33 @@ const experiences = [
 ]
 
 export default function Experience() {
+  // State to detect if we're on mobile
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // Initial check
+    checkMobile()
+
+    // Add listener for resize
+    window.addEventListener("resize", checkMobile)
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
   return (
     <div className="container mx-auto px-4">
-      <FadeInSection>
+      {/* Use a smaller amount for the main section on mobile */}
+      <FadeInSection amount={isMobile ? 0.05 : 0.2}>
         <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
         <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <FadeInSection key={index} delay={0.2 + index * 0.1}>
+            <FadeInSection key={index} delay={isMobile ? 0.1 : 0.2 + index * 0.1} amount={isMobile ? 0.05 : 0.2}>
               <Card className="overflow-hidden border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent flex flex-row items-center gap-3">
                   <div className="bg-primary/10 p-2 rounded-full text-primary">{exp.icon}</div>

@@ -17,7 +17,8 @@ export default function Home() {
       <section id="about" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-24">
         <About />
       </section>
-      <section id="experience" className="py-16 scroll-mt-32">
+      {/* Added negative margin to ensure the section starts in view */}
+      <section id="experience" className="py-16 scroll-mt-32 -mt-4">
         <Experience />
       </section>
       <section id="skills" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-24">
