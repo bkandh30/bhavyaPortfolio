@@ -53,10 +53,26 @@ export default function Navbar() {
 
   const scrollToSection = (href: string) => {
     setMobileMenuOpen(false)
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+
+    // Small delay to ensure mobile menu closes first
+    setTimeout(() => {
+      const targetId = href.replace("#", "")
+      const element = document.getElementById(targetId)
+
+      if (element) {
+        // Get the navbar height to offset the scroll position
+        const navbarHeight = document.querySelector("header")?.offsetHeight || 0
+
+        // Calculate the element's position relative to the document
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY
+
+        // Scroll to the element with offset for the navbar
+        window.scrollTo({
+          top: elementPosition - navbarHeight - 20, // Additional 20px buffer
+          behavior: "smooth",
+        })
+      }
+    }, 100)
   }
 
   return (
@@ -73,7 +89,10 @@ export default function Navbar() {
         <Link
           href="#home"
           className="text-xl font-bold tracking-tight text-primary"
-          onClick={() => scrollToSection("#home")}
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection("#home")
+          }}
         >
           Bhavya Kandhari
         </Link>

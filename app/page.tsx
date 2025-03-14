@@ -17,16 +17,16 @@ export default function Home() {
       <section id="about" className="py-16 bg-muted/30 dark:bg-muted/10">
         <About />
       </section>
-      <section id="experience" className="py-16">
+      <section id="experience" className="py-16 scroll-mt-20">
         <Experience />
       </section>
-      <section id="skills" className="py-16 bg-muted/30 dark:bg-muted/10">
+      <section id="skills" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-20">
         <Skills />
       </section>
-      <section id="projects" className="py-16">
+      <section id="projects" className="py-16 scroll-mt-20">
         <Projects />
       </section>
-      <section id="contact" className="py-16 bg-muted/30 dark:bg-muted/10">
+      <section id="contact" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-20">
         <Contact />
       </section>
       <Footer />
