@@ -53,7 +53,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="container mx-auto px-4 pt-10">
+    <div className="container mx-auto px-4">
       <FadeInSection>
         <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
         <div className="max-w-4xl mx-auto space-y-8">
