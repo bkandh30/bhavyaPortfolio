@@ -52,9 +52,10 @@ export default function Navbar() {
   }, [setTheme])
 
   const scrollToSection = (href: string) => {
+    // Close mobile menu first
     setMobileMenuOpen(false)
 
-    // Small delay to ensure mobile menu closes first
+    // Longer delay to ensure mobile menu is fully closed
     setTimeout(() => {
       const targetId = href.replace("#", "")
       const element = document.getElementById(targetId)
@@ -63,16 +64,31 @@ export default function Navbar() {
         // Get the navbar height to offset the scroll position
         const navbarHeight = document.querySelector("header")?.offsetHeight || 0
 
+        // Special handling for Experience section which seems to need more offset
+        const extraOffset = targetId === "experience" ? 80 : 50
+
         // Calculate the element's position relative to the document
         const elementPosition = element.getBoundingClientRect().top + window.scrollY
 
-        // Scroll to the element with offset for the navbar
+        // Scroll to the element with increased offset
         window.scrollTo({
-          top: elementPosition - navbarHeight - 20, // Additional 20px buffer
+          top: elementPosition - navbarHeight - extraOffset,
           behavior: "smooth",
         })
+
+        // Additional scroll check after animation completes
+        setTimeout(() => {
+          // If we're still not at the right position, adjust again
+          const finalElementPosition = document.getElementById(targetId)?.getBoundingClientRect().top || 0
+          if (finalElementPosition > 0 && finalElementPosition < 100) {
+            window.scrollBy({
+              top: -navbarHeight,
+              behavior: "smooth",
+            })
+          }
+        }, 1000)
       }
-    }, 100)
+    }, 300)
   }
 
   return (

@@ -14,19 +14,19 @@ export default function Home() {
       <section id="home">
         <Hero />
       </section>
-      <section id="about" className="py-16 bg-muted/30 dark:bg-muted/10">
+      <section id="about" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-24">
         <About />
       </section>
-      <section id="experience" className="py-16 scroll-mt-20">
+      <section id="experience" className="py-16 scroll-mt-32">
         <Experience />
       </section>
-      <section id="skills" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-20">
+      <section id="skills" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-24">
         <Skills />
       </section>
-      <section id="projects" className="py-16 scroll-mt-20">
+      <section id="projects" className="py-16 scroll-mt-24">
         <Projects />
       </section>
-      <section id="contact" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-20">
+      <section id="contact" className="py-16 bg-muted/30 dark:bg-muted/10 scroll-mt-24">
         <Contact />
       </section>
       <Footer />
