@@ -6,6 +6,7 @@ import { Download, Github, Linkedin, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import TypeWriter from "./TypeWriter"
 import { motion } from "framer-motion"
+import { Suspense } from "react"
 
 export default function Hero() {
   const roles = ["Software Developer", "Data Engineer", "Problem Solver"]
@@ -14,7 +15,12 @@ export default function Hero() {
     <div className="container mx-auto px-4 pt-32 pb-16 min-h-[90vh] flex flex-col justify-center bg-pattern">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 order-2 lg:order-1">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="will-change-transform"
+          >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Hi, I&apos;m <span className="text-primary">Bhavya Kandhari</span>
             </h1>
@@ -24,7 +30,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="text-xl md:text-2xl text-muted-foreground h-8"
+            className="text-xl md:text-2xl text-muted-foreground h-8 will-change-transform"
           >
             <TypeWriter texts={roles} typingSpeed={100} deletingSpeed={50} delayBetweenTexts={1500} />
           </motion.div>
@@ -33,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className="text-lg max-w-md"
+            className="text-lg max-w-md will-change-transform"
           >
             Passionate about building scalable software solutions and data pipelines. Currently pursuing a Master&apos;s
             in Computer Science at Arizona State University.
@@ -43,7 +49,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.3 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 will-change-transform"
           >
             <Button
               onClick={() => {
@@ -64,7 +70,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
-            className="flex gap-4 pt-2"
+            className="flex gap-4 pt-2 will-change-transform"
           >
             <Link
               href="https://linkedin.com/in/bhavyakandhari"
@@ -91,18 +97,26 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
-          className="flex justify-center lg:justify-end order-1 lg:order-2"
+          className="flex justify-center lg:justify-end order-1 lg:order-2 will-change-transform"
         >
           <div className="relative">
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary via-blue-500 to-primary/50 opacity-70 blur-md animate-pulse"></div>
-            <Image
-              src="/headshot.jpg"
-              alt="Bhavya Kandhari Headshot"
-              width={1200}
-              height={1600}
-              className="rounded-full object-cover shadow-lg w-64 h-64 md:w-80 md:h-80 xl:w-[400px] xl:h-[400px] relative ring-4 ring-background"
-              priority
-            />
+            <Suspense
+              fallback={
+                <div className="w-64 h-64 md:w-80 md:h-80 xl:w-[400px] xl:h-[400px] rounded-full bg-muted/20"></div>
+              }
+            >
+              <Image
+                src="/headshot.jpg"
+                alt="Bhavya Kandhari Headshot"
+                width={400}
+                height={400}
+                className="rounded-full object-cover shadow-lg w-64 h-64 md:w-80 md:h-80 xl:w-[400px] xl:h-[400px] relative ring-4 ring-background"
+                priority
+                quality={85}
+                sizes="(max-width: 768px) 256px, (max-width: 1200px) 320px, 400px"
+              />
+            </Suspense>
           </div>
         </motion.div>
       </div>

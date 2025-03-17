@@ -36,7 +36,7 @@ export default function FadeInSection({
         delay: delay,
         ease: "easeOut",
       }}
-      className={className}
+      className={`will-change-transform ${className}`}
     >
       {children}
     </motion.div>

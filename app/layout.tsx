@@ -4,11 +4,18 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+// Optimize font loading
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "sans-serif"],
+})
 
 export const metadata: Metadata = {
   title: "Bhavya Kandhari",
   description: "Personal portfolio of Bhavya Kandhari, Software Developer and Data Engineer",
+  metadataBase: new URL("https://bhavyakandhari.vercel.app"),
 }
 
 export default function RootLayout({

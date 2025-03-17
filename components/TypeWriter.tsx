@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 interface TypeWriterProps {
   texts: string[]
@@ -21,41 +21,38 @@ export default function TypeWriter({
   const [currentText, setCurrentText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
 
+  const typeEffect = useCallback(() => {
+    // Current text to work with
+    const fullText = texts[currentTextIndex]
+
+    // If deleting
+    if (isDeleting) {
+      setCurrentText(fullText.substring(0, currentText.length - 1))
+
+      // If deleted completely, move to typing mode and next text
+      if (currentText.length === 0) {
+        setIsDeleting(false)
+        setCurrentTextIndex((currentTextIndex + 1) % texts.length)
+      }
+    }
+    // If typing
+    else {
+      setCurrentText(fullText.substring(0, currentText.length + 1))
+
+      // If typed completely, wait and then start deleting
+      if (currentText.length === fullText.length) {
+        setTimeout(() => {
+          setIsDeleting(true)
+        }, delayBetweenTexts)
+      }
+    }
+  }, [currentText, currentTextIndex, isDeleting, texts, delayBetweenTexts])
+
   useEffect(() => {
-    const timeout = setTimeout(
-      () => {
-        // Current text to work with
-        const fullText = texts[currentTextIndex]
-
-        // If deleting
-        if (isDeleting) {
-          setCurrentText(fullText.substring(0, currentText.length - 1))
-
-          // If deleted completely, move to typing mode and next text
-          if (currentText.length === 0) {
-            setIsDeleting(false)
-            setCurrentTextIndex((currentTextIndex + 1) % texts.length)
-            return
-          }
-        }
-        // If typing
-        else {
-          setCurrentText(fullText.substring(0, currentText.length + 1))
-
-          // If typed completely, wait and then start deleting
-          if (currentText.length === fullText.length) {
-            setTimeout(() => {
-              setIsDeleting(true)
-            }, delayBetweenTexts)
-            return
-          }
-        }
-      },
-      isDeleting ? deletingSpeed : typingSpeed,
-    )
+    const timeout = setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed)
 
     return () => clearTimeout(timeout)
-  }, [currentText, currentTextIndex, isDeleting, texts, typingSpeed, deletingSpeed, delayBetweenTexts])
+  }, [currentText, isDeleting, typeEffect, deletingSpeed, typingSpeed])
 
   return <span className={className}>{currentText}</span>
 }
