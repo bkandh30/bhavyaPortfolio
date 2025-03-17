@@ -7,8 +7,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Bhavya Kandhari | Software Developer & Data Engineer",
+  title: "Bhavya Kandhari",
   description: "Personal portfolio of Bhavya Kandhari, Software Developer and Data Engineer",
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
 }
 
 export default function RootLayout({
