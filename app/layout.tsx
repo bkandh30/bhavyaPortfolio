@@ -9,9 +9,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Bhavya Kandhari",
   description: "Personal portfolio of Bhavya Kandhari, Software Developer and Data Engineer",
-  icons: {
-    icon: [{ url: "/favicon.ico" }],
-  },
 }
 
 export default function RootLayout({
@@ -21,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${inter.className} dark bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
