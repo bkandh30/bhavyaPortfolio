@@ -1,6 +1,5 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building, GraduationCap } from "lucide-react"
 import FadeInSection from "./FadeInSection"
 import { useEffect, useState } from "react"
@@ -71,39 +70,38 @@ export default function Experience() {
         <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Timeline line */}
-          <div className="absolute left-16 sm:left-24 top-0 h-full w-0.5 bg-gradient-to-b from-primary via-primary/70 to-primary/50"></div>
+          {/* Timeline line - adjusted for mobile */}
+          <div className="absolute left-8 sm:left-16 top-0 h-full w-0.5 bg-gradient-to-b from-primary via-primary/70 to-primary/50"></div>
 
           {/* Timeline content */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <FadeInSection key={index} delay={0.1 + index * 0.1} amount={0.1}>
                 <div className="relative flex">
-                  {/* Timeline dot */}
-                  <div className="absolute left-16 sm:left-24 transform -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-primary z-10 flex items-center justify-center">
+                  {/* Timeline dot - adjusted for mobile */}
+                  <div className="absolute left-8 sm:left-16 transform -translate-x-1/2 w-8 h-8 rounded-full bg-background border-2 border-primary z-10 flex items-center justify-center">
                     <div className="text-primary">{exp.icon}</div>
                   </div>
 
-                  {/* Content */}
-                  <div className="ml-28 sm:ml-36 w-full">
-                    <Card className="overflow-hidden border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                      <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent pb-2">
-                        <div className="space-y-1">
-                          <CardTitle>{exp.title}</CardTitle>
-                          <p className="text-muted-foreground text-sm">{exp.period}</p>
-                          <p className="text-muted-foreground font-medium">{exp.company}</p>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2 list-disc list-outside ml-5">
+                  {/* Content - adjusted for mobile */}
+                  <div className="ml-16 sm:ml-28 w-full">
+                    <div className="bg-card border border-border rounded-lg overflow-hidden shadow-md">
+                      <div className="p-4 bg-gradient-to-r from-primary/10 to-transparent">
+                        <h3 className="text-xl font-bold">{exp.title}</h3>
+                        <p className="text-muted-foreground mt-1">{exp.period}</p>
+                        <p className="text-muted-foreground">{exp.company}</p>
+                      </div>
+
+                      <div className="p-4">
+                        <ul className="space-y-4 list-disc list-outside ml-5">
                           {exp.description.map((item, i) => (
                             <li key={i} className="text-muted-foreground">
                               {item}
                             </li>
                           ))}
                         </ul>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </FadeInSection>
@@ -114,3 +112,4 @@ export default function Experience() {
     </div>
   )
 }
+
