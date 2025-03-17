@@ -5,7 +5,6 @@ const nextConfig = {
     minimumCacheTTL: 60,
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   compiler: {
@@ -15,3 +14,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+

@@ -46,7 +46,7 @@ export default function Navbar() {
         return {
           id: sectionId,
           top: adjustedTop,
-          bottom: adjustedTop + section.offsetHeight,
+          bottom: adjustedTop + (section as HTMLElement).offsetHeight,
         }
       })
 
