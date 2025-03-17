@@ -1,4 +1,6 @@
 "use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building, GraduationCap } from "lucide-react"
 import FadeInSection from "./FadeInSection"
 import { useEffect, useState } from "react"
@@ -84,17 +86,24 @@ export default function Experience() {
 
                   {/* Content */}
                   <div className="ml-28 sm:ml-36 w-full">
-                    <h3 className="text-xl font-bold">{exp.title}</h3>
-                    <p className="text-muted-foreground mt-1">{exp.period}</p>
-                    <p className="text-muted-foreground mb-4">{exp.company}</p>
-
-                    <ul className="space-y-2 list-disc list-outside ml-5">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="text-muted-foreground">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <Card className="overflow-hidden border-l-4 border-l-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                      <CardHeader className="bg-gradient-to-r from-primary/10 to-transparent pb-2">
+                        <div className="space-y-1">
+                          <CardTitle>{exp.title}</CardTitle>
+                          <p className="text-muted-foreground text-sm">{exp.period}</p>
+                          <p className="text-muted-foreground font-medium">{exp.company}</p>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <ul className="space-y-2 list-disc list-outside ml-5">
+                          {exp.description.map((item, i) => (
+                            <li key={i} className="text-muted-foreground">
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
               </FadeInSection>
