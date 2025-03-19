@@ -33,7 +33,7 @@ export default function Contact() {
               </Link>
 
               <Link
-                href="https://linkedin.com/in/bhavyakandhari"
+                href="https://www.linkedin.com/in/kandharibhavya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center p-6 rounded-lg bg-card hover:bg-primary/5 transition-colors border border-border hover:border-primary hover:shadow-md"
@@ -43,7 +43,7 @@ export default function Contact() {
                 </div>
                 <h3 className="font-medium text-lg mb-2">LinkedIn</h3>
                 <span className="text-muted-foreground group-hover:text-primary transition-colors text-center">
-                  linkedin.com/in/bhavyakandhari
+                  linkedin.com/in/kandharibhavya
                 </span>
                 <ArrowUpRight className="h-4 w-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>

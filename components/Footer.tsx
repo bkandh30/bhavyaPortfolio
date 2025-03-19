@@ -45,7 +45,7 @@ export default function Footer() {
 
           <div className="flex gap-4">
             <Link
-              href="https://linkedin.com/in/bhavyakandhari"
+              href="https://www.linkedin.com/in/kandharibhavya/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full"
