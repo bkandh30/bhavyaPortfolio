@@ -2,19 +2,18 @@
 
 import { Linkedin, Mail, Github, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import FadeInSection from "./FadeInSection"
+import SectionHeader from "./SectionHeader"
 
 export default function Contact() {
   return (
     <div className="container mx-auto px-4">
       <FadeInSection>
+        <SectionHeader title="Connect With Me" />
         <div className="w-full max-w-4xl mx-auto">
           <Card className="overflow-hidden border-none shadow-lg">
             <div className="h-2 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20"></div>
-            <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent text-center">
-              <CardTitle className="text-2xl">Connect With Me</CardTitle>
-            </CardHeader>
             <CardContent className="p-8 grid grid-cols-1 md:grid-cols-3 gap-8">
               <Link
                 href="mailto:bhavya.kandhari.eng@gmail.com"
