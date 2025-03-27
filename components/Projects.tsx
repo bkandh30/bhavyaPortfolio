@@ -10,6 +10,16 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "Git Implementation",
+    description: [
+      "Developed a functional subset of Git core features in Python, including repository initialization and object management (blob, tree, commit).",
+      "Implemented Git's object model using SHA-1 hashing for content addressing and zlib for compression/decompression.",
+      "Built HTTP cloning capabilities, involving remote ref fetching, packfile parsing, delta resolution, and working directory checkout.",
+    ],
+    techStack: ["Python"],
+    githubUrl: "https://github.com/bkandh30/git-implementation",
+  },
+  {
     title: "Simplified Alignment in LLMs",
     description: [
       "Implemented Direct Preference Optimization (DPO) on the Meta Llama models using the ELI5 dataset, achieving a 6% improvement in reasoning accuracy.",
