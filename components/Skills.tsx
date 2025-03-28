@@ -13,7 +13,7 @@ const skillCategories = [
   {
     name: "Frameworks/Libraries",
     icon: <FileCode2 className="h-5 w-5" />,
-    skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Next.js", "TailwindCSS"],
+    skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Next.js", "TailwindCSS", "PyTest", "Cypress"],
   },
   {
     name: "Databases",
