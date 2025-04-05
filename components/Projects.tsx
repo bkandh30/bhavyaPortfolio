@@ -10,6 +10,17 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "DNS Server Implementation",
+    description: [
+      "Developed a custom DNS server using Python and UDP, capable of parsing, handling, and forwarding DNS queries.",
+      "Implemented support for multi-question queries, domain name compression, and dynamic fallback to upstream resolvers.",
+      "Built detailed response generation with correct DNS header, question, and answer sections.",
+      "Ensured fault-tolerance with timeout handling and default error responses to maintain service reliability.",
+    ],
+    techStack: ["Python", "UDP Protocol"],
+    githubUrl: "https://github.com/bkandh30/DNS-Server",
+  },
+  {
     title: "Git Implementation",
     description: [
       "Developed a functional subset of Git core features in Python, including repository initialization and object management (blob, tree, commit).",
