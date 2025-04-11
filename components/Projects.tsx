@@ -31,17 +31,6 @@ const projects = [
     githubUrl: "https://github.com/bkandh30/git-implementation",
   },
   {
-    title: "Simplified Alignment in LLMs",
-    description: [
-      "Implemented Direct Preference Optimization (DPO) on the Meta Llama models using the ELI5 dataset, achieving a 6% improvement in reasoning accuracy.",
-      "Preprocessed and tokenized datasets for alignment, structuring question-response pairs to optimize input for clarity and coherence.",
-      "Evaluated performance using GSM8K (mathematical reasoning) and MMLU (multi-domain reasoning) benchmarks, balancing reasoning depth and user-friendliness.",
-      "Analyzed trade-offs between simplicity and reasoning depth, providing insights into improving LLM alignment for diverse real-world applications.",
-    ],
-    techStack: ["TRL", "Transformers", "PyTorch", "Pandas"],
-    githubUrl: "https://github.com/bkandh30/LLM-Alignment",
-  },
-  {
     title: "Video Reconstruction from Randomized Frames",
     description: [
       "Engineered a preprocessing solution that reduced video data complexity through grayscaling and downsampling",
