@@ -10,15 +10,15 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
-    title: "DNS Server Implementation",
+    title: "FastAPI Summarizer Microservice",
     description: [
-      "Developed a custom DNS server using Python and UDP, capable of parsing, handling, and forwarding DNS queries.",
-      "Implemented support for multi-question queries, domain name compression, and dynamic fallback to upstream resolvers.",
-      "Built detailed response generation with correct DNS header, question, and answer sections.",
-      "Ensured fault-tolerance with timeout handling and default error responses to maintain service reliability.",
+      "Developed an asynchronous RESTful API microservice using Python and the high-performance FastAPI framework to handle text summarization requests and manage summary data via CRUD operations.",
+      "Integrated PostgreSQL for persistent data storage, utilizing the asynchronous Tortoise ORM for database interactions and Aerich for robust schema migration management.",
+      "Employed Test-Driven Development (TDD) principles throughout the development lifecycle, writing unit and integration tests with Pytest to ensure code quality and correctness.",
+      "Containerized the multi-service application (API server, database) using Docker and Docker Compose, and implemented a CI/CD pipeline with GitHub Actions for automated testing and deployment to Heroku.",
     ],
-    techStack: ["Python", "UDP Protocol"],
-    githubUrl: "https://github.com/bkandh30/DNS-Server",
+    techStack: ["FastAPI", "Docker", "Tortoise ORM"],
+    githubUrl: "https://github.com/bkandh30/fastAPI-summary",
   },
   {
     title: "Git Implementation",
@@ -40,6 +40,17 @@ const projects = [
     ],
     techStack: ["OpenCV", "NumPy", "Matplotlib", "SciPy"],
     githubUrl: "https://github.com/bkandh30/Randomized-VideoFrames-Reconstruction",
+  },
+  {
+    title: "DNS Server Implementation",
+    description: [
+      "Developed a custom DNS server using Python and UDP, capable of parsing, handling, and forwarding DNS queries.",
+      "Implemented support for multi-question queries, domain name compression, and dynamic fallback to upstream resolvers.",
+      "Built detailed response generation with correct DNS header, question, and answer sections.",
+      "Ensured fault-tolerance with timeout handling and default error responses to maintain service reliability.",
+    ],
+    techStack: ["Python", "UDP Protocol"],
+    githubUrl: "https://github.com/bkandh30/DNS-Server",
   },
 ]
 
