@@ -12,10 +12,9 @@ const projects = [
   {
     title: "FastAPI Summarizer Microservice",
     description: [
-      "Developed an asynchronous RESTful API microservice using Python and the high-performance FastAPI framework to handle text summarization requests and manage summary data via CRUD operations.",
-      "Integrated PostgreSQL for persistent data storage, utilizing the asynchronous Tortoise ORM for database interactions and Aerich for robust schema migration management.",
-      "Employed Test-Driven Development (TDD) principles throughout the development lifecycle, writing unit and integration tests with Pytest to ensure code quality and correctness.",
-      "Containerized the multi-service application (API server, database) using Docker and Docker Compose, and implemented a CI/CD pipeline with GitHub Actions for automated testing and deployment to Heroku.",
+      "Designed, built, tested (TDD), and deployed an asynchronous text summarization microservice using Python, FastAPI, PostgreSQL (Tortoise ORM), and Docker.",
+      "Implemented full RESTful CRUD API, managed database schema with Aerich migrations, and containerized services using Docker Compose.",
+      "Established CI/CD pipeline with GitHub Actions for automated testing (Pytest) and deployment to Heroku.",
     ],
     techStack: ["FastAPI", "Docker", "Tortoise ORM"],
     githubUrl: "https://github.com/bkandh30/fastAPI-summary",
