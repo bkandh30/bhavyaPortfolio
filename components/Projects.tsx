@@ -10,7 +10,7 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
-    title: "FastAPI Summarizer Microservice",
+    title: "Async Text Summarization Microservice",
     description: [
       "Developed a high-performance, asynchronous RESTful API microservice using Python and FastAPI for generating text summaries from web articles.",
       "Integrated PostgreSQL with Tortoise ORM (async) for data persistence, managing schema changes effectively with Aerich migrations.",
