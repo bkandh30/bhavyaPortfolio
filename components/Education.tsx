@@ -12,7 +12,7 @@ const educationData = [
     degree: "Master of Science in Computer Science",
     period: "Aug 2023 - May 2025 (Expected)",
     location: "Tempe, Arizona",
-    gpa: "3.92/4.00",
+    gpa: "3.93/4.00",
     courses: [
       "Digital Video Processing",
       "Foundations of Algorithm",
@@ -23,6 +23,7 @@ const educationData = [
       "Data Processing at Scale",
       "Applied Cryptography",
       "Data Mining",
+      "Cloud Computing",
     ],
   },
   {
