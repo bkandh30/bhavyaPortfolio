@@ -10,7 +10,7 @@ const educationData = [
   {
     institution: "Arizona State University",
     degree: "Master of Science in Computer Science",
-    period: "Aug 2023 - May 2025 (Expected)",
+    period: "Aug 2023 - May 2025",
     location: "Tempe, Arizona",
     gpa: "3.93/4.00",
     courses: [

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 const experiences = [
   {
     title: "Graduate Services Assistant",
-    period: "August 2024 - Present",
+    period: "August 2024 - May 2025",
     company: "Arizona State University",
     icon: <GraduationCap className="h-5 w-5" />,
     description: [
