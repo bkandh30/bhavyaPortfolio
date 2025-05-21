@@ -10,6 +10,18 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "AWS Cloud Resume Challenge",
+    description: [
+      "Successfully built and deployed a serverless resume website on AWS, demonstrating proficiency in cloud architecture and DevOps practices.",
+      "Utilized S3 for static website hosting, CloudFront for content delivery and SSL/TLS, and Route 53 for DNS management.",
+      "Implemented a serverless visitor counter using AWS Lambda (Python), and DynamoDB for dynamic content.",
+      "Automated infrastructure provisioning and deployment using Terraform and CloudFormation.",
+      "Established a CI/CD pipeline with GitHub Actions for automated testing and deployment to AWS upon code changes.",
+    ],
+    techStack: ["AWS S3", "CloudFront", "Route 53", "Lambda", "API Gateway", "DynamoDB", "AWS SAM", "GitHub Actions", "Python"],
+    githubUrl: "https://github.com/bkandh30/AWS-Cloud-Resume-Challenge",
+  },
+  {
     title: "Async Text Summarization Microservice",
     description: [
       "Developed a high-performance, asynchronous RESTful API microservice using Python and FastAPI for generating text summaries from web articles.",
