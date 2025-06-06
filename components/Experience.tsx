@@ -35,11 +35,11 @@ const experiences = [
     company: "Ernst & Young",
     icon: <Building className="h-5 w-5" />,
     description: [
-      "Spearheaded development and quality improvement of KPIs and lead discussions across 6 different functions over a 1 year period to contextualize and define cyber-security metrics, resulting in enhancement in KPI Quality.",
-      "Designed upper and lower thresholds by implementing statistical and time series models to catch anomalies in data quality to increase the efficiency of launching investigations by 20%.",
-      "Developed and clearly documented automation development of processing IP addresses and finding organizational information using AWS Redshift, Glue, Lambda and Secret Manager to reduce process cycle time by 1.5 hours/day.",
-      "Accomplished approximately 65% mapping of the CVEs from NVD Database to MITRE framework by integrating CAPEC database to model adversaries tactics and techniques.",
-      "Created column profile of data quality utilizing AWS Glue ETL pipeline and displayed statistical information regarding data distribution through AWS Quicksight for quality monitoring and improvement.",
+      "Automated a comprehensive IP enrichment workflow by orchestrating services using AWS Redshift, AWS Glue, AWS Lambda, and Secrets Manager; reducing daily processing time by 1.5 hours.",
+      "Designed and deployed robust anomaly detection models leveraging time-series data to proactively identify irregular patterns in network activity, leading to a 20% improvement in the accuracy of incident investigation processes.",
+      "Built highly scalable ETL pipelines using AWS Glue, processing over 50M+ records daily, concurrently built interactive data profiling dashboards in AWS QuickSight to visualize data distributions and ensure quality compliance.",
+      "Developed and deployed an NLP model using PySpark and K-Means clustering to group semantically similar vulnerability descriptions; processed over 10M+ records to consolidate more than 10,000 unique vulnerabilities and their remediation strategies, reducing duplication and improving threat intelligence accuracy.",
+      "Integrated and normalized data from NVD and CAPEC databases, successfully correlating over 65% of CVEs to the MITRE ATT&CK framework to improve threat intelligence and enhance contextual analysis for defensive strategies.",
     ],
   },
 ]

@@ -24,20 +24,20 @@ const projects = [
   {
     title: "Async Text Summarization Microservice",
     description: [
-      "Developed a high-performance, asynchronous RESTful API microservice using Python and FastAPI for generating text summaries from web articles.",
-      "Integrated PostgreSQL with Tortoise ORM (async) for data persistence, managing schema changes effectively with Aerich migrations.",
-      "Implemented article fetching and summarization logic leveraging the newspaper3k and NLTK libraries within a containerized Docker/Compose environment.",
-      "Ensured code quality and reliability through Test-Driven Development (TDD) using Pytest (unit/integration tests, coverage, parallel execution) and code quality tools (Flake8, Black, isort).",
+      "Developed an asynchronous, production-grade RESTful microservice using FastAPI, Uvicorn, and Tortoise ORM, achieving consistent sub-200ms response latency in local benchmark environments with PostgreSQL as the backend.",
+      "Designed a 2-container Docker Compose architecture to separately manage the API and database layers, with published and versioned container images hosted on GitHub Packages for seamless deployment.",
+      "Implemented real-time content parsing and summarization using newspaper3k and lxml-html-clean, and strategically moved NLP tasks off the main thread to reduce request bottlenecks and optimize throughput by 20%.",
+      "Achieved 100% test coverage with a comprehensive suite of configuration, unit, and integration tests written using pytest; automated testing and deployment workflows using GitHub Actions for continuous integration.",
     ],
-    techStack: ["FastAPI", "Docker", "Tortoise ORM"],
+    techStack: ["FastAPI", "Docker", "Tortoise ORM", "NLTK"],
     githubUrl: "https://github.com/bkandh30/fastAPI-summary",
   },
   {
     title: "Git Implementation",
     description: [
-      "Developed a functional subset of Git core features in Python, including repository initialization and object management (blob, tree, commit).",
-      "Implemented Git's object model using SHA-1 hashing for content addressing and zlib for compression/decompression.",
-      "Built HTTP cloning capabilities, involving remote ref fetching, packfile parsing, delta resolution, and working directory checkout.",
+      "Recreated Git’s underlying object model from scratch by implementing all four core object types—blob, tree, commit, and tag, leveraging SHA-1 hashing and zlib compression to store content-addressed snapshots.",
+      "Built a self-contained Git engine supporting repository initialization and core commands such as write-tree, commit-tree, and cat-file, simulating the full lifecycle of a local Git repository without external tooling.",
+      "Implemented support for remote cloning over HTTP using Git Smart Protocol v2, including parsing of raw packfiles, resolving ref-deltas, and reconstructing trees from delta-compressed binary streams.",
     ],
     techStack: ["Python"],
     githubUrl: "https://github.com/bkandh30/git-implementation",
@@ -45,10 +45,9 @@ const projects = [
   {
     title: "Video Reconstruction from Randomized Frames",
     description: [
-      "Engineered a preprocessing solution that reduced video data complexity through grayscaling and downsampling",
-      "Enhanced feature detection accuracy by adapting ORB and SURF algorithms, optimizing the frame reordering process for video sequences.",
-      "Developed and tested 3 sorting alogrithms to efficiently sequence video frames based on number of feature matches.",
-      "Implemented a logistic and sequencial performance metric that demonstrated improvement in frame sequencing accuracy compared to existing methods.",
+      "Built a frame-reordering pipeline to reconstruct videos from shuffled frames by computing pairwise frame distances using ORB descriptors and generating a visual similarity map to quantify temporal proximity.",
+      "Designed a novel TSP-inspired ordering algorithm optimized for sequencing visual data; it outperformed both Growth-based and Hierarchical Clustering approaches, reducing average frame misplacement error by 60%.",
+      "Defined custom evaluation metrics such as Sequential Order Error and Logistic Loss to quantitatively benchmark algorithm performance, yielding best-in-class results with an SOE of 0.56 and Logistic Loss of 0.10.",
     ],
     techStack: ["OpenCV", "NumPy", "Matplotlib", "SciPy"],
     githubUrl: "https://github.com/bkandh30/Randomized-VideoFrames-Reconstruction",

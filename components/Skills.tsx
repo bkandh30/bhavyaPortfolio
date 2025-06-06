@@ -8,12 +8,12 @@ const skillCategories = [
   {
     name: "Languages",
     icon: <Code2 className="h-5 w-5" />,
-    skills: ["Python", "JavaScript", "TypeScript"],
+    skills: ["Golang", "Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
     name: "Frameworks/Libraries",
     icon: <FileCode2 className="h-5 w-5" />,
-    skills: ["React.js", "Node.js", "Express.js", "FastAPI", "Next.js", "TailwindCSS", "PyTest", "Cypress"],
+    skills: ["React", "Node.js", "Express", "FastAPI", "Next.js", "TailwindCSS", "Pandas", "NumPy", "Matplotlib", "Pydantic", "Pytest"],
   },
   {
     name: "Databases",
@@ -28,7 +28,7 @@ const skillCategories = [
   {
     name: "Cloud & DevOps",
     icon: <Cloud className="h-5 w-5" />,
-    skills: ["AWS", "Docker", "Git/GitHub", "Prometheus", "Grafana", "New Relic", "NGINX"],
+    skills: ["AWS (S3, EC2, Lambda, DynamoDB, Route 53, CloudFront, ECR, Glue)", "Docker (Compose, Swarm)", "Git/GitHub", "Linux/Bash Scripting", "GitHub Actions", "New Relic", "Prometheus", "Grafana", "NGINX", "Kubernetes", "Postman"],
   },
   {
     name: "BI Tools",
