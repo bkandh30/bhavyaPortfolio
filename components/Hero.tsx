@@ -41,7 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.3, delay: 0.2 }}
             className="text-lg max-w-md will-change-transform"
           >
-            Software developer specializing in backend infrastructure and cloud infrastructure. Graduated with a Master&apos;s in Computer Science from Arizona State University.
+            Software developer specializing in backend architecture and cloud infrastructure. Graduated with a Master&apos;s in Computer Science from Arizona State University.
           </motion.p>
 
           <motion.div
