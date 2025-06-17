@@ -10,6 +10,17 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "Gistbox",
+    description: [
+      "Developed a full-featured, production-ready web application from scratch using Go’s standard library",
+      "Implemented a clean, framework-free architecture featuring advanced routing with httprouter, custom middleware for logging and error handling, and robust security measures including CSRF protection.",
+      "Integrated with a MySQL database for data persistence and built secure user session management for authentication and authorization.",
+      "Established a comprehensive testing suite and a flexible configuration system using both command-line flags and environment variables.",
+    ],
+    techStack: ["Go", "MySQL", "net/http", "httprouter", "REST API", "HTML/CSS", "JavaScript"],
+    githubUrl: "https://github.com/bkandh30/gistbox",
+  },
+  {
     title: "AWS Cloud Resume Challenge",
     description: [
       "Successfully built and deployed a serverless resume website on AWS, demonstrating proficiency in cloud architecture and DevOps practices.",
