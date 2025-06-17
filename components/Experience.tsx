@@ -6,27 +6,15 @@ import { useEffect, useState } from "react"
 
 const experiences = [
   {
-    title: "Graduate Services Assistant",
-    period: "August 2024 - May 2025",
-    company: "Arizona State University",
+    title: "Software Engineer",
+    period: "June 2024 - April 2025",
+    company: "Ira A Fulton Schools of Engineering",
     icon: <GraduationCap className="h-5 w-5" />,
     description: [
-      "Supported grading and proctoring for over 600 students in CSE 445: Distributed Software Development and CSE 446: Software Integration and Engineering, ensuring academic integrity and smooth test administration.",
-      "Implemented quality control measures to maintain grading accuracy, resulting in a 95% consistency rate.",
-      "Collaborated with the instructor to streamline grading workflows, reducing turnaround time for feedback by 20%.",
-      "Addressed and resolved student inquiries within 24 hours, ensuring clear communication on grading procedures and course expectations.",
-    ],
-  },
-  {
-    title: "Robotics Camp Teaching Assistant",
-    period: "June 2024 - July 2024",
-    company: "Arizona State University",
-    icon: <GraduationCap className="h-5 w-5" />,
-    description: [
-      "Acted as a Teaching Assistant for ASU's 7UP and 9UP Robotics Camp, responsible for teaching and assisting nearly 50 students over the course of 4 weeks.",
-      "Conducted interactive lessons on Alice, LEGO EV3 programming, ASU's VIPLE, TinkerCAD, 3D Designing, C# programming, Web programming, and phone app development.",
-      "Provided one-on-one support and mentorship to students, helping them understand complex topics and complete their projects successfully.",
-      "Managed classroom logistics, ensuring a safe, inclusive, and productive learning environment, contributing to a 100% incident-free camp experience.",
+      "Developed and maintained backend tooling in Python and C# for distributed computing labs, supporting scalable assignment deployment and automated evaluation for over 400 students each semester.",
+      "Engineered comprehensive automated test pipelines using Pytest and Bash scripting to validate more than 200 student projects, rigorously testing for functional correctness, runtime performance, and resilience to edge cases.",
+      "Enhanced the efficiency of grading systems by optimizing multi-threaded evaluation scripts; implemented asynchronous task execution and resource-aware throttling, leading to a 50% reduction in total execution time.",
+      "Facilitated hands-on debugging workshops and led system architecture walkthroughs, guiding students in designing and implementing RESTful web services, and reinforcing best practices for concurrency control and distributed system patterns.",
     ],
   },
   {
