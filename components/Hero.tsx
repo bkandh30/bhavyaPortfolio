@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 import { Suspense } from "react"
 
 export default function Hero() {
-  const roles = ["Software Engineer", "Cloud Engineer", "Building Scalable Systems", "CI/CD"]
+  const roles = ["Software Engineer", "Cloud Engineer", "Building Scalable Systems", "Continuous Integration/ Continuous Deployment"]
 
   return (
     <div className="container mx-auto px-4 pt-32 pb-16 min-h-[90vh] flex flex-col justify-center bg-pattern">

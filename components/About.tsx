@@ -20,9 +20,9 @@ export default function About() {
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
               >
-                I am a Computer Science graduate student at Arizona State University with expertise in software
-                development, data engineering, and analytics. Previously, I worked as a Data Analyst & ETL Developer at
-                Ernst & Young, where I led data extraction and modeling projects to enhance cybersecurity insights.
+                I am a Computer Science graduate from Arizona State University (GPA: 3.93) with over 2 years of experience in backend development, cloud infrastructure, and data engineering.
+                At Ernst & Young, I designed scalable ETL pipelines, anomaly detection workflows, and cloud-native dashboards to enhance cybersecurity insights using AWS Glue, Lambda, Redshift, and QuickSight.
+                At ASU, I worked with Professor Yinong Chen to develop scalable tooling supporting CSE 445 (Distributed Software Development) and CSE 446 (Software Integration and Testing).
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -31,8 +31,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="mt-4"
               >
-                Passionate about problem-solving and building scalable solutions, I am actively seeking opportunities in
-                Software Development and Data Engineering.
+                Let’s connect if you’re hiring Software Developers or Cloud Engineers, or want to talk about backend systems, infrastructure, or DevOps tooling.
               </motion.p>
             </CardContent>
           </Card>
