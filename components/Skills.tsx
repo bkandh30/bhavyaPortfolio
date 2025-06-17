@@ -1,39 +1,34 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Code2, Database, FileCode2, Cloud, BarChart3, Wrench } from "lucide-react"
+import { Code2, Database, FileCode2, Cloud, Network } from "lucide-react"
 import FadeInSection from "./FadeInSection"
 
 const skillCategories = [
   {
-    name: "Languages",
+    name: "FrontEnd",
     icon: <Code2 className="h-5 w-5" />,
-    skills: ["Golang", "Python", "JavaScript", "TypeScript", "SQL"],
+    skills: ["React.js", "Next.js", "TailwindCSS"],
   },
   {
-    name: "Frameworks/Libraries",
+    name: "BackEnd",
     icon: <FileCode2 className="h-5 w-5" />,
-    skills: ["React", "Node.js", "Express", "FastAPI", "Next.js", "TailwindCSS", "Pandas", "NumPy", "Matplotlib", "Pydantic", "Pytest"],
-  },
-  {
-    name: "Databases",
-    icon: <Database className="h-5 w-5" />,
-    skills: ["PostgreSQL", "MongoDB"],
-  },
-  {
-    name: "Data Processing",
-    icon: <BarChart3 className="h-5 w-5" />,
-    skills: ["Apache Flink", "Spark", "Kafka"],
+    skills: ["Golang", "Python", "JavaScript", "TypeScript", "SQL (Postgres, MySQL)", "Node.js", "Express", "FastAPI", "Pydantic", "Pytest"],
   },
   {
     name: "Cloud & DevOps",
     icon: <Cloud className="h-5 w-5" />,
-    skills: ["AWS (S3, EC2, Lambda, DynamoDB, Route 53, CloudFront, ECR, Glue)", "Docker (Compose, Swarm)", "Git/GitHub", "Linux/Bash Scripting", "GitHub Actions", "New Relic", "Prometheus", "Grafana", "NGINX", "Kubernetes", "Postman"],
+    skills: ["AWS", "Docker (Compose, Swarm)", "Git/GitHub", "Linux/Bash Scripting", "GitHub Actions", "New Relic", "Prometheus", "Grafana", "NGINX", "Kubernetes", "Postman"],
   },
   {
-    name: "BI Tools",
-    icon: <Wrench className="h-5 w-5" />,
-    skills: ["Tableau", "AWS Quicksight", "Power BI"],
+    name: "System Design & Architecture",
+    icon: <Network className="h-5 w-5" />,
+    skills: ["Redis", "Message Queues", "Pub/Sub", "Proxies", "Load Balancers", "Polling", "WebSockets", "CI/CD"],
+  },
+  {
+    name: "Data Engineering",
+    icon: <Database className="h-5 w-5" />,
+    skills: ["AWS Glue", "AWS Redshift", "PySpark", "Pandas", "NumPy", "Matplotlib", "PowerBI", "AWS QuickSight", "Tableau"],
   },
 ]
 
