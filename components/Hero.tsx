@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 import { Suspense } from "react"
 
 export default function Hero() {
-  const roles = ["Software Developer", "Data Engineer", "Problem Solver"]
+  const roles = ["Software Engineer", "Cloud Engineer", "Building Scalable Systems", "CI/CD"]
 
   return (
     <div className="container mx-auto px-4 pt-32 pb-16 min-h-[90vh] flex flex-col justify-center bg-pattern">
@@ -41,8 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.3, delay: 0.2 }}
             className="text-lg max-w-md will-change-transform"
           >
-            Passionate about building scalable software solutions and data pipelines. Currently pursuing a Master&apos;s
-            in Computer Science at Arizona State University.
+            Software developer specializing in backend infrastructure and data engineering. Graduated with a Master&apos;s in Computer Science from Arizona State University.
           </motion.p>
 
           <motion.div
