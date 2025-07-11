@@ -10,6 +10,16 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "GoFlix - RESTful Movie Management API",
+    description: [
+      "Built production-ready RESTful API in Golang with 12+ endpoints for full CRUD operations, JWT authentication, and microservices architecture patterns, supporting 100+ concurrent users.",
+      "Implemented secure backend services with PostgreSQL database, automated migrations, bcrypt password encryption, and middleware integration, achieving 99.9% uptime through comprehensive error handling and graceful shutdown.",
+      "Designed scalable architecture with background email processing, CORS support, structured logging, and real-time metrics monitoring (/debug/vars), demonstrating enterprise-grade development practices and performance optimization capabilities.",
+    ],
+    techStack: ["Golang", "PostgreSQL", "JWT", "REST API", "Docker", "bcrypt", "CORS"],
+    githubUrl: "https://github.com/bkandh30/GoFlix",
+  },
+  {
     title: "Gistbox",
     description: [
       "Developed a full-featured, production-ready web application from scratch using Go’s standard library",
@@ -52,27 +62,6 @@ const projects = [
     ],
     techStack: ["Python"],
     githubUrl: "https://github.com/bkandh30/git-implementation",
-  },
-  {
-    title: "Video Reconstruction from Randomized Frames",
-    description: [
-      "Built a frame-reordering pipeline to reconstruct videos from shuffled frames by computing pairwise frame distances using ORB descriptors and generating a visual similarity map to quantify temporal proximity.",
-      "Designed a novel TSP-inspired ordering algorithm optimized for sequencing visual data; it outperformed both Growth-based and Hierarchical Clustering approaches, reducing average frame misplacement error by 60%.",
-      "Defined custom evaluation metrics such as Sequential Order Error and Logistic Loss to quantitatively benchmark algorithm performance, yielding best-in-class results with an SOE of 0.56 and Logistic Loss of 0.10.",
-    ],
-    techStack: ["OpenCV", "NumPy", "Matplotlib", "SciPy"],
-    githubUrl: "https://github.com/bkandh30/Randomized-VideoFrames-Reconstruction",
-  },
-  {
-    title: "DNS Server Implementation",
-    description: [
-      "Developed a custom DNS server using Python and UDP, capable of parsing, handling, and forwarding DNS queries.",
-      "Implemented support for multi-question queries, domain name compression, and dynamic fallback to upstream resolvers.",
-      "Built detailed response generation with correct DNS header, question, and answer sections.",
-      "Ensured fault-tolerance with timeout handling and default error responses to maintain service reliability.",
-    ],
-    techStack: ["Python", "UDP Protocol"],
-    githubUrl: "https://github.com/bkandh30/DNS-Server",
   },
 ]
 
