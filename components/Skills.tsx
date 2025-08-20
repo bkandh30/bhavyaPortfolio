@@ -6,29 +6,29 @@ import FadeInSection from "./FadeInSection"
 
 const skillCategories = [
   {
-    name: "FrontEnd",
+    name: "Languages",
     icon: <Code2 className="h-5 w-5" />,
-    skills: ["React.js", "Next.js", "TailwindCSS"],
+    skills: ["Rust", "JavaScript", "TypeScript", "Golang", "Python", "SQL"],
   },
   {
-    name: "BackEnd",
+    name: "Frameworks & Libraries",
     icon: <FileCode2 className="h-5 w-5" />,
-    skills: ["Golang", "Python", "JavaScript", "TypeScript", "SQL (Postgres, MySQL)", "Node.js", "Express", "FastAPI", "Pydantic", "Pytest"],
+    skills: ["React.js", "Next.js", "TailwindCSS", "Node.js", "Express.js", "FastAPI", "Pandas", "NumPy", "Matplotlib"],
   },
   {
     name: "Cloud & DevOps",
     icon: <Cloud className="h-5 w-5" />,
-    skills: ["AWS", "Docker (Compose, Swarm)", "Git/GitHub", "Linux/Bash Scripting", "GitHub Actions", "New Relic", "Prometheus", "Grafana", "NGINX", "Kubernetes", "Postman"],
+    skills: ["AWS", "Docker", "Kubernetes", "Git/GitHub", "Linux", "GitHub Actions", "Prometheus", "Grafana"],
   },
   {
-    name: "System Design & Architecture",
-    icon: <Network className="h-5 w-5" />,
-    skills: ["Redis", "Message Queues", "Pub/Sub", "Proxies", "Load Balancers", "Polling", "WebSockets", "CI/CD"],
-  },
-  {
-    name: "Data Engineering",
+    name: "Databases & Tools",
     icon: <Database className="h-5 w-5" />,
-    skills: ["AWS Glue", "AWS Redshift", "PySpark", "Pandas", "NumPy", "Matplotlib", "PowerBI", "AWS QuickSight", "Tableau"],
+    skills: ["PostgreSQL", "MySQL", "Redis", "Power BI", "Tableau", "AWS QuickSight"],
+  },
+  {
+    name: "Skills",
+    icon: <Network className="h-5 w-5" />,
+    skills: ["Agile", "CI/CD", "Version Control", "gRPC", "RESTful API", "Microservices", "Distributed Systems"],
   },
 ]
 
