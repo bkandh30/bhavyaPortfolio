@@ -10,6 +10,17 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+  title: "Metered API Server",
+  description: [
+    "Engineered a secure API server in Rust using Warp, Tokio, and SQLx, enabling API key management, authentication middleware, and PostgreSQL-backed usage tracking.",
+    "Implemented quotas, request logging, and rate limiting features to enforce usage policies, ensuring reliable and fair API consumption.",
+    "Containerized the application with Docker Compose for reproducible development and production-ready deployments, supporting seamless integration with PostgreSQL.",
+    "Applied industry best practices including structured logging, health/readiness probes, OpenAPI documentation, and CI/CD pipelines with GitHub Actions for production-grade reliability.",
+  ],
+    techStack: ["Rust", "Warp", "Tokio", "SQLx", "PostgreSQL", "Docker", "CI/CD"],
+    githubUrl: "https://github.com/bkandh30/metered-api-server",
+  },
+  {
     title: "GoFlix - RESTful Movie Management API",
     description: [
       "Built production-ready RESTful API in Golang with 12+ endpoints for full CRUD operations, JWT authentication, and microservices architecture patterns, supporting 100+ concurrent users.",
@@ -18,17 +29,6 @@ const projects = [
     ],
     techStack: ["Golang", "PostgreSQL", "JWT", "REST API", "Docker", "bcrypt", "CORS"],
     githubUrl: "https://github.com/bkandh30/GoFlix",
-  },
-  {
-    title: "Gistbox",
-    description: [
-      "Developed a full-featured, production-ready web application from scratch using Go’s standard library",
-      "Implemented a clean, framework-free architecture featuring advanced routing with httprouter, custom middleware for logging and error handling, and robust security measures including CSRF protection.",
-      "Integrated with a MySQL database for data persistence and built secure user session management for authentication and authorization.",
-      "Established a comprehensive testing suite and a flexible configuration system using both command-line flags and environment variables.",
-    ],
-    techStack: ["Go", "MySQL", "net/http", "httprouter", "REST API", "HTML/CSS", "JavaScript"],
-    githubUrl: "https://github.com/bkandh30/gistbox",
   },
   {
     title: "AWS Cloud Resume Challenge",
@@ -52,16 +52,6 @@ const projects = [
     ],
     techStack: ["FastAPI", "Docker", "Tortoise ORM", "NLTK"],
     githubUrl: "https://github.com/bkandh30/fastAPI-summary",
-  },
-  {
-    title: "Git Implementation",
-    description: [
-      "Recreated Git’s underlying object model from scratch by implementing all four core object types—blob, tree, commit, and tag, leveraging SHA-1 hashing and zlib compression to store content-addressed snapshots.",
-      "Built a self-contained Git engine supporting repository initialization and core commands such as write-tree, commit-tree, and cat-file, simulating the full lifecycle of a local Git repository without external tooling.",
-      "Implemented support for remote cloning over HTTP using Git Smart Protocol v2, including parsing of raw packfiles, resolving ref-deltas, and reconstructing trees from delta-compressed binary streams.",
-    ],
-    techStack: ["Python"],
-    githubUrl: "https://github.com/bkandh30/git-implementation",
   },
 ]
 
