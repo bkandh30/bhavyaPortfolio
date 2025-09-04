@@ -10,6 +10,17 @@ import SectionHeader from "./SectionHeader"
 
 const projects = [
   {
+    title: "URL Shortener Webapp",
+    description: [
+      "Developed a full-stack URL shortener using Next.js 15, TypeScript, and Turso edge database, following modern web development practices.",
+      "Implemented RESTful APIs with features like short link generation, Upstash Redis–based rate limiting, 30-day expiration, and privacy-first analytics.",
+      "Built a responsive UI with Tailwind CSS and reusable components, ensuring accessibility and seamless cross-device experience.",
+      "Deployed on Vercel with CI/CD workflows, consolidating microservices into a unified Next.js edge architecture for scalability and maintainability.",
+    ],
+    techStack: ["Next.js", "TypeScript", "Turso", "Upstash Redis", "Tailwind CSS", "Vercel", "CI/CD"],
+    githubUrl: "https://github.com/bkandh30/hash.ly", // replace with your repo link
+  },
+  {
   title: "Metered API Server",
   description: [
     "Engineered a secure API server in Rust using Warp, Tokio, and SQLx, enabling API key management, authentication middleware, and PostgreSQL-backed usage tracking.",
