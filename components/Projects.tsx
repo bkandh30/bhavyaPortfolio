@@ -19,6 +19,7 @@ const projects = [
     ],
     techStack: ["Next.js", "TypeScript", "Turso", "Upstash Redis", "Tailwind CSS", "Vercel", "CI/CD"],
     githubUrl: "https://github.com/bkandh30/hash.ly", // replace with your repo link
+    liveUrl: "https://hash-ly.vercel.app/",
   },
   {
   title: "Metered API Server",
@@ -97,13 +98,23 @@ export default function Projects() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" asChild className="w-full group hover:border-primary hover:text-primary">
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-                      View on GitHub
-                      <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  </Button>
+                  <div className="flex gap-2 w-full">
+                    <Button variant="outline" asChild className="flex-1 group hover:border-primary hover:text-primary">
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                        View on GitHub
+                        <ExternalLink className="ml-2 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </Link>
+                    </Button>
+                    {project.liveUrl && (
+                      <Button asChild className="flex-1 group">
+                        <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                          Live Site
+                        </Link>
+                      </Button>
+                    )}
+                  </div>
                 </CardFooter>
               </Card>
             </FadeInSection>
