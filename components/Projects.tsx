@@ -99,7 +99,7 @@ export default function Projects() {
                 </CardContent>
                 <CardFooter>
                   <div className="flex gap-2 w-full">
-                    <Button variant="outline" asChild className="flex-1 group hover:border-primary hover:text-primary">
+                    <Button variant="outline" asChild className="flex-[0.65] group hover:border-primary hover:text-primary">
                       <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                         View on GitHub
@@ -107,7 +107,7 @@ export default function Projects() {
                       </Link>
                     </Button>
                     {project.liveUrl && (
-                      <Button asChild className="flex-1 group">
+                      <Button asChild className="flex-[0.35] group">
                         <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                           Live Site
